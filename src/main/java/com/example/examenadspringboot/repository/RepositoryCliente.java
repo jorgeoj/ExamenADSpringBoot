@@ -14,7 +14,7 @@ public interface RepositoryCliente extends JpaRepository<Cliente, Long> {
     List<Cliente> getActivosPorVentaMayor(Double total);
 
     @Query(value = "SELECT SUM(c.total) FROM Cliente c")
-    Integer getSumaTotales();
+    Double getSumaTotales();
 
     @Query("SELECT AVG(c.total) FROM Cliente c WHERE c.estado = 'Activo'")
     Double getMediaTotalClientesActivos();
