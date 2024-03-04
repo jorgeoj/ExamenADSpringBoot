@@ -53,4 +53,5 @@ public class ClienteController {
 
         return new ResponseEntity<>(stats, HttpStatus.OK);
     }
+
 }
